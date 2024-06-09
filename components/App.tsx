@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Editor from "./Editor";
+import dynamic from 'next/dynamic';
+const Editor = dynamic(() => import('./Editor'), { ssr: false });
 import useLocalStorage from "@/hooks/useLocalStorage";
 
 const App = () => {
